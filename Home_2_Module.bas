@@ -48,7 +48,7 @@ For Each ws In ThisWorkbook.Worksheets
                 year_close = year_close
             
                 yearly_change = year_close - year_open
-                percent_change = (yearly_change / (year_open + 1)) - 1
+                percent_change = (yearly_change / year_open)
                 
                 
             'reset everything
@@ -74,7 +74,7 @@ For Each ws In ThisWorkbook.Worksheets
             year_open = ws.Cells(i, 3).Value
             year_close = ws.Cells(i + 261, 6).Value
             yearly_change = year_close - year_open
-            percent_change = (yearly_change / (year_open + 1)) - 1
+            percent_change = (yearly_change / year_open)
     
 
             End If
